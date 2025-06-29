@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#00796b">
+</head>
+
+<body>
+    <header>
+        <button class="menu-toggle">&#9776;</button>
+        <h1 class="header-title">BUKU KAS UMKM</h1>
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="transaksi.html">Transaksi</a>
+            <a href="laporan.html">Laporan</a>
+            <a href="tentang.html">Tentang</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="tentang">
+            <h2>Tentang Aplikasi</h2>
+            <p><strong>Nama Aplikasi:</strong> BukuKas UMKM</p>
+            <p><strong>Pengembang:</strong> Rama Aditya (225410006)</p>
+            <p>
+                BukuKas UMKM adalah aplikasi pencatatan keuangan yang ringan dan praktis,
+                dirancang untuk mendukung pelaku UMKM dalam mengelola pemasukan dan pengeluaran
+                secara efisien — bahkan secara <strong>offline</strong>.
+            </p>
+
+            <h3>Kontak & Sosial Media</h3>
+            <ul class="sosial-media">
+                <li><a href="https://github.com/Ramaadityaaa" target="_blank">🌐 GitHub</a></li>
+                <li><a href="https://linkedin.com/in/RAMA ADITYA" target="_blank">🔗 LinkedIn</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav');
+            toggle.addEventListener('click', () => {
+                nav.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+
+</html>

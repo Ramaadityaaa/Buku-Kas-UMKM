@@ -1,0 +1,282 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+header {
+  background-color: #00796b;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #00796b;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+main {
+  padding: 1rem;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.ringkasan {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 100%;
+  border-radius: 8px;
+  padding: 1rem;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.hijau {
+  background-color: #4caf50;
+}
+
+.merah {
+  background-color: #f44336;
+}
+
+.abu {
+  background-color: #607d8b;
+}
+
+form input,
+form select,
+form button {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #00796b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #005b4f;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ccc;
+}
+
+th,
+td {
+  padding: 0.5rem;
+  text-align: left;
+  word-break: break-word;
+}
+
+/* Hamburger menu styling */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  cursor: pointer;
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    text-align: left;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    padding: 0.5rem 1rem;
+  }
+
+  nav a {
+    color: #333;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #ccc;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .header-title {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  /* Responsif tabel transaksi */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody tr {
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  tbody td {
+    text-align: left;
+    padding-left: 50%;
+    position: relative;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0.75rem;
+    top: 0.75rem;
+    font-weight: bold;
+    white-space: nowrap;
+    color: #555;
+  }
+}
+
+/* Desktop view */
+@media (min-width: 601px) {
+  .ringkasan {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .ringkasan .card {
+    width: 100%;
+  }
+}
+.tentang {
+  text-align: left;
+  margin-top: 2rem;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.tentang h2 {
+  margin-bottom: 1rem;
+  color: #00796b;
+}
+
+.tentang p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.tentang h3 {
+  margin-top: 1.5rem;
+  color: #333;
+}
+
+.sosial-media {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.sosial-media li {
+  margin-bottom: 0.5rem;
+}
+
+.sosial-media a {
+  text-decoration: none;
+  color: #00796b;
+  font-weight: bold;
+}
+
+.sosial-media a:hover {
+  text-decoration: underline;
+}

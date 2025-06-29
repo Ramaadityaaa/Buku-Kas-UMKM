@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BUKU KAS UMKM</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" href="/Icon.png" type="image/png" />
+    <meta name="theme-color" content="#00796b" />
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <button class="menu-toggle">&#9776;</button>
+        <h1 class="header-title">BUKU KAS UMKM</h1>
+        <nav id="nav-menu">
+            <a href="index.html">Dashboard</a>
+            <a href="transaksi.html">Transaksi</a>
+            <a href="laporan.html">Laporan</a>
+            <a href="tentang.html">Tentang</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="ringkasan">
+            <h2>Catatan Keuangan</h2>
+            <div class="card hijau">
+                <p>Total Pemasukan</p>
+                <h3 id="totalPemasukan">Rp 0</h3>
+            </div>
+            <div class="card merah">
+                <p>Total Pengeluaran</p>
+                <h3 id="totalPengeluaran">Rp 0</h3>
+            </div>
+            <div class="card abu">
+                <p>Saldo Saat Ini</p>
+                <h3 id="saldo">Rp 0</h3>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggle = document.querySelector('.menu-toggle');
+            const nav = document.getElementById('nav-menu');
+            toggle.addEventListener('click', () => {
+                nav.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>

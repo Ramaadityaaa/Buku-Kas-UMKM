@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BUKU KAS UMKM</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" href="/icons/icon-192.png" type="image/png" />
+    <meta name="theme-color" content="#00796b" />
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</head>
+
+
+<body>
+    <header>
+        <button class="menu-toggle">&#9776;</button>
+        <h1 class="header-title">BUKU KAS UMKM</h1>
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="transaksi.html">Transaksi</a>
+            <a href="laporan.html">Laporan</a>
+            <a href="tentang.html">Tentang</a>
+        </nav>
+    </header>
+
+    <main>
+        <form id="formTransaksi">
+            <input type="date" id="tanggal" required />
+            <input type="number" id="nominal" placeholder="Nominal" required />
+            <input type="text" id="kategori" placeholder="Kategori" required />
+            <select id="tipe">
+                <option value="pemasukan">Pemasukan</option>
+                <option value="pengeluaran">Pengeluaran</option>
+            </select>
+            <input type="text" id="catatan" placeholder="Catatan" />
+            <button type="submit">Simpan</button>
+        </form>
+
+        <section>
+            <h2>Riwayat Transaksi</h2>
+            <table id="tabelTransaksi">
+                <thead>
+                    <tr>
+                        <th>Tanggal</th>
+                        <th>Kategori</th>
+                        <th>Nominal</th>
+                        <th>Tipe</th>
+                        <th>Catatan</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+    <script src="js/transaksi.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav');
+            toggle.addEventListener('click', () => {
+                nav.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+
+</html>
