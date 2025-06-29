@@ -2,47 +2,65 @@
 <html lang="id">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BUKU KAS UMKM</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="icon" href="/icons/icon-192.png" type="image/png" />
-    <meta name="theme-color" content="#00796b" />
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function () {
-                navigator.serviceWorker.register('/sw.js');
-            });
-        }
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BUKU KAS UMKM</title>
+
+  <!-- Style -->
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="icon" href="/icons/icon-192.png" type="image/png" />
+  <meta name="theme-color" content="#00796b" />
+
+  <!-- Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/sw.js');
+      });
+    }
+  </script>
 </head>
 
-
 <body>
-    <header>
-        <button class="menu-toggle">&#9776;</button>
-        <h1 class="header-title">BUKU KAS UMKM</h1>
-        <nav>
-            <a href="index.html">Dashboard</a>
-            <a href="transaksi.html">Transaksi</a>
-            <a href="laporan.html">Laporan</a>
-            <a href="tentang.html">Tentang</a>
-        </nav>
-    </header>
-    <main>
-        <canvas id="grafikLaporan" width="400" height="200"></canvas>
-    </main>
-    <script src="js/laporan.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const toggle = document.querySelector('.menu-toggle');
-            const nav = document.querySelector('nav');
-            toggle.addEventListener('click', () => {
-                nav.classList.toggle('show');
-            });
-        });
-    </script>
+  <!-- HEADER -->
+  <header>
+    <button class="menu-toggle">&#9776;</button>
+    <h1 class="header-title">BUKU KAS UMKM</h1>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="transaksi.html">Transaksi</a>
+      <a href="laporan.html">Laporan</a>
+      <a href="tentang.html">Tentang</a>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <section class="laporan-section">
+      <h2 class="judul-laporan">Laporan Keuangan</h2>
+      <canvas id="grafikLaporan" width="400" height="200"></canvas>
+    </section>
+  </main>
+
+  <!-- ✅ Tambahkan Chart.js dari CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- File JavaScript untuk membuat grafik -->
+  <script src="js/laporan.js"></script>
+
+  <!-- Toggle Menu Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('nav');
+      toggle.addEventListener('click', () => {
+        nav.classList.toggle('show');
+      });
+    });
+  </script>
 </body>
 
 </html>

@@ -1,3 +1,4 @@
+/* ==== Reset & Global ==== */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -5,6 +6,15 @@ body {
   background-color: #f9f9f9;
 }
 
+main {
+  padding: 1rem;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ==== Header & Navigation ==== */
 header {
   background-color: #00796b;
   color: white;
@@ -40,21 +50,102 @@ nav a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-main {
-  padding: 1rem;
-  margin: 0 auto;
+/* ==== Footer ==== */
+.footer {
   text-align: center;
+  padding: 1.5rem 1rem;
+  background-color: #00796b;
+  color: white;
+  font-size: 0.9rem;
+  margin-top: auto;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* ==== Konten Tentang ==== */
+.tentang-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #e0f2f1, #ffffff);
+  min-height: 100vh;
+}
+
+.tentang-card {
+  background-color: #fff;
+  padding: 2rem;
+  max-width: 500px;
   width: 100%;
-  box-sizing: border-box;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  line-height: 1.6;
+  color: #333;
+  transition: transform 0.3s ease;
 }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
+.tentang-card:hover {
+  transform: translateY(-5px);
 }
 
+.tentang-card h2 {
+  color: #00796b;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+.tentang-card h3 {
+  margin-top: 2rem;
+  color: #444;
+  font-size: 1.2rem;
+}
+
+/* ==== Responsive Navbar ==== */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    text-align: left;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    padding: 0.5rem 1rem;
+  }
+
+  nav a {
+    color: #333;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #ccc;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .header-title {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
+
+/* ==== Ringkasan, Tabel, Form, Lainnya ==== */
 .ringkasan {
   display: flex;
   flex-direction: column;
@@ -134,54 +225,8 @@ td {
   word-break: break-word;
 }
 
-/* Hamburger menu styling */
-.menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: white;
-  position: absolute;
-  left: 1rem;
-  top: 1rem;
-  cursor: pointer;
-}
-
-/* Mobile view */
 @media (max-width: 600px) {
-  .menu-toggle {
-    display: block;
-  }
 
-  nav {
-    display: none;
-    flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.95);
-    width: 100%;
-    text-align: left;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 999;
-    padding: 0.5rem 1rem;
-  }
-
-  nav a {
-    color: #333;
-    padding: 0.75rem 0;
-    border-bottom: 1px solid #ccc;
-  }
-
-  nav.show {
-    display: flex;
-  }
-
-  .header-title {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-
-  /* Responsif tabel transaksi */
   table,
   thead,
   tbody,
@@ -226,57 +271,90 @@ td {
   }
 }
 
-/* Desktop view */
-@media (min-width: 601px) {
-  .ringkasan {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .ringkasan .card {
-    width: 100%;
-  }
-}
-.tentang {
-  text-align: left;
-  margin-top: 2rem;
-  background-color: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+/* ====== TAMBAHAN KONTAK & SOSMED PALING BAWAH ====== */
+.kontak-sosmed-tambahan {
+  padding: 2rem 1rem 1rem;
+  text-align: center;
+  background-color: #fff;
 }
 
-.tentang h2 {
-  margin-bottom: 1rem;
-  color: #00796b;
-}
-
-.tentang p {
-  margin: 0.5rem 0;
-  line-height: 1.6;
-}
-
-.tentang h3 {
-  margin-top: 1.5rem;
-  color: #333;
-}
-
-.sosial-media {
-  list-style: none;
-  padding: 0;
-  margin-top: 0.5rem;
-}
-
-.sosial-media li {
-  margin-bottom: 0.5rem;
-}
-
-.sosial-media a {
-  text-decoration: none;
-  color: #00796b;
+.kontak-sosmed-tambahan h3 {
+  font-size: 1rem;
   font-weight: bold;
+  margin-bottom: 1rem;
+  color: #000;
 }
 
-.sosial-media a:hover {
-  text-decoration: underline;
+.link-sosmed-tambahan {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
+
+/* ✅ FIX FINAL: Hapus garis bawah dan warna biru */
+.link-sosmed-tambahan a,
+.link-sosmed-tambahan a:link,
+.link-sosmed-tambahan a:visited,
+.link-sosmed-tambahan a:active,
+.link-sosmed-tambahan a:focus,
+.link-sosmed-tambahan a:hover {
+  color: #000 !important;
+  text-decoration: none !important;
+  outline: none !important;
+  border: none !important;
+  font-size: 0.9rem !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  display: inline-block !important;
+  cursor: pointer;
+}
+
+.kontak-sosmed-tambahan {
+  padding: 2rem 1rem 1rem;
+  background-color: #fff;
+  text-align: center;
+  padding-top: 1000px;
+}
+
+.kontak-sosmed-tambahan h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.link-sosmed-tambahan {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.link-sosmed-tambahan a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #000 !important;
+  text-decoration: none !important;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+}
+
+.link-sosmed-tambahan a:hover {
+  background-color: #f0f0f0;
+}
+
+.link-sosmed-tambahan i {
+  font-size: 1rem;
+  margin-right: 4px;
+  color: #000;
+}
+

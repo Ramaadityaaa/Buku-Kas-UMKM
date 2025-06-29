@@ -7,7 +7,8 @@
     <title>Tentang</title>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="manifest" href="/manifest.json" />
-    <meta name="theme-color" content="#00796b">
+    <meta name="theme-color" content="#00796b" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
@@ -22,24 +23,36 @@
         </nav>
     </header>
 
-    <main class="container">
-        <section class="tentang">
-            <h2>Tentang Aplikasi</h2>
-            <p><strong>Nama Aplikasi:</strong> BukuKas UMKM</p>
-            <p><strong>Pengembang:</strong> Rama Aditya (225410006)</p>
-            <p>
-                BukuKas UMKM adalah aplikasi pencatatan keuangan yang ringan dan praktis,
-                dirancang untuk mendukung pelaku UMKM dalam mengelola pemasukan dan pengeluaran
-                secara efisien — bahkan secara <strong>offline</strong>.
-            </p>
-
-            <h3>Kontak & Sosial Media</h3>
-            <ul class="sosial-media">
-                <li><a href="https://github.com/Ramaadityaaa" target="_blank">🌐 GitHub</a></li>
-                <li><a href="https://linkedin.com/in/RAMA ADITYA" target="_blank">🔗 LinkedIn</a></li>
-            </ul>
+    <main>
+        <section class="tentang-wrapper">
+            <div class="tentang-card">
+                <h2>Tentang Aplikasi</h2>
+                <p>
+                    BukuKas UMKM merupakan aplikasi pencatatan keuangan digital yang ringan dan mudah digunakan,
+                    dirancang khusus untuk membantu pelaku UMKM dalam mengelola arus kas secara efisien, teratur,
+                    dan dapat diakses bahkan tanpa koneksi internet.
+                </p>
+            </div>
         </section>
     </main>
+
+    <!-- Bagian Sosial Media di bawah konten -->
+    <section class="kontak-sosmed-tambahan">
+        <center>
+            <h3>KONTAK &SOSMED</h3>
+            <div class="link-sosmed-tambahan">
+                <a href="mailto:rama.aditya@students.utdi.ac.id" target="_blank" style="text-decoration:none; color:black" >
+                    <i class="fas fa-envelope"></i> <b>E-mail</b>
+                </a>
+                <a href="https://github.com/Ramadityaaa" target="_blank" style="text-decoration:none; color:black" >
+                    <i class="fab fa-github"></i> <b>Github</b>
+                </a>
+                <a href="https://www.linkedin.com/in/rama-aditya-4aab1924a/" target="_blank" style="text-decoration:none; color:black" >
+                    <i class="fab fa-linkedin"></i> <b>Linkedin</b>
+                </a>
+            </div>
+        </center>
+    </section>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
