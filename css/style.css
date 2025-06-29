@@ -271,28 +271,6 @@ td {
   }
 }
 
-/* ====== TAMBAHAN KONTAK & SOSMED PALING BAWAH ====== */
-.kontak-sosmed-tambahan {
-  padding: 2rem 1rem 1rem;
-  text-align: center;
-  background-color: #fff;
-}
-
-.kontak-sosmed-tambahan h3 {
-  font-size: 1rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #000;
-}
-
-.link-sosmed-tambahan {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-/* ✅ FIX FINAL: Hapus garis bawah dan warna biru */
 .link-sosmed-tambahan a,
 .link-sosmed-tambahan a:link,
 .link-sosmed-tambahan a:visited,
@@ -312,10 +290,10 @@ td {
 }
 
 .kontak-sosmed-tambahan {
-  padding: 2rem 1rem 1rem;
+  margin-top: -5rem;
+  padding: 1rem;
   background-color: #fff;
   text-align: center;
-  padding-top: 1000px;
 }
 
 .kontak-sosmed-tambahan h3 {
@@ -330,31 +308,36 @@ td {
 .link-sosmed-tambahan {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
+  margin-bottom: 1rem;
 }
 
 .link-sosmed-tambahan a {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  color: #000 !important;
-  text-decoration: none !important;
+  gap: 0.4rem;
+  color: #000;
   font-weight: bold;
-  font-size: 0.9rem;
+  text-decoration: none;
+  font-size: 0.85rem;
   text-transform: uppercase;
   transition: background-color 0.3s ease;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
 }
+
 
 .link-sosmed-tambahan a:hover {
   background-color: #f0f0f0;
+  border-radius: 6px;
+  padding: 0.3rem 0.6rem;
 }
-
 .link-sosmed-tambahan i {
   font-size: 1rem;
-  margin-right: 4px;
-  color: #000;
 }
 
+.copyright {
+  font-size: 0.75rem;
+  color: #777;
+  margin-top: 0.5rem;
+}

@@ -12,7 +12,7 @@ document.getElementById("formTransaksi").addEventListener("submit", function (e)
   const data = JSON.parse(localStorage.getItem("dataTransaksi")) || [];
   data.push(transaksi);
   localStorage.setItem("dataTransaksi", JSON.stringify(data));
-  
+
   this.reset();
   tampilkanData();
 });
@@ -27,15 +27,13 @@ function tampilkanData() {
 
   data.forEach(item => {
     const row = document.createElement("tr");
-
     row.innerHTML = `
       <td data-label="Tanggal">${item.tanggal}</td>
       <td data-label="Kategori">${item.kategori}</td>
-      <td data-label="Nominal">Rp ${item.nominal}</td>
+      <td data-label="Nominal">Rp ${Number(item.nominal).toLocaleString()}</td>
       <td data-label="Tipe">${item.tipe}</td>
       <td data-label="Catatan">${item.catatan}</td>
     `;
-
     tbody.appendChild(row);
   });
 }
